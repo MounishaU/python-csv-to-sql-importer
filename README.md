@@ -42,13 +42,56 @@ A powerful and intelligent Python tool designed to simplify the process of impor
     pip install -r requirements.txt
     ```
 
-### Usage (Coming Soon)
+### Usage
 
-More detailed usage instructions will be provided as the project develops.
+This tool allows you to import data from a CSV file into MySQL database table. Currently, the CSV file path and target table name are hardcoded within the 'csv_importer.py' script.
+
+**1. Prepare Your CSV File:**
+   - Ensure your CSV file is named 'sample_data.csv' and is located in the same directory as 'csv_importer.py'.
+   - The script will infer SQL data types based on the data in this CSV.
+
+**2. Configure Your MySQL Database:**
+   - Open 'csv_importer.py'.
+   - Locate the 'DB_CONFIG' dictionary at the top of the file.
+   - Update 'host', 'database', 'user', and 'password' to match your MySQL server's credentials. For example:
+     ```python
+     DB_CONFIG = {
+         'host': 'localhost',
+         'database': 'ONLINE_FOOD_DEL', # Your database name
+         'user': 'root',               # Your MySQL username
+         'password': '12345678'        # Your MySQL password
+     }
+     ```
+
+**3. Configure Target Table (Optional, if different from default):**
+   - In 'csv_importer.py', you can also adjust 'TARGET_TABLE_NAME' if you want a different table name than 'employees_data':
+     ```python
+     TARGET_TABLE_NAME = 'employees_data'
+     ```
+
+**4. Run the Importer:**
+   - Open your terminal.
+   - Navigate to the project directory:
+     ```bash
+     cd /path/to/your/python-csv-to-sql-importer
+     ```
+   - Ensure your virtual environment is activated:
+     ```bash
+     source venv/bin/activate
+     ```
+   - Run the script:
+     ```bash
+     python csv_importer.py
+     ```
+
+**5. Verify Data in MySQL:**
+   - After successful execution, connect to your MySQL database using a client (e.g., MySQL command line or Workbench).
+   - Use your database: 'USE ONLINE_FOOD_DEL;'
+   - Check the table content: 'SELECT * FROM employees_data;' (replace `employees_data` with your 'TARGET_TABLE_NAME' if changed).
 
 ## Contributing
 
-Contributions are welcome! (For now, it's just me, but this is good practice!)
+Contributions are welcome! (For now, it is just me, but this is good practice.)
 
 ## License
 
