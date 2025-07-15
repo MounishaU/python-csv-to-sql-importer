@@ -1,0 +1,6 @@
+id,name,age,city,is_active,registration_date,salary
+1,Mounisha,30,Nellore,TRUE,2024-01-15,60000.50
+2,Neil,28,Gurgaon,FALSE,2022-02-20,45000.00
+3,Ruchith,25,Hyderabad,TRUE,2022-04-01,72000.75
+4,Sindhu,35,Chennai,TRUE,2023-11-10,55000.25
+5,Tara,22,Mumbai,FALSE,2023-04-05,38000.00
